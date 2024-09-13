@@ -1,0 +1,265 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #e0e0e0; /* Warna teks abu-abu terang */
+    background-color: #121212; /* Warna latar belakang hitam */
+}
+
+.navbar-brand img {
+    width: 50px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 50px;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    object-fit: cover; /* Memastikan gambar tetap proporsional di dalam lingkaran */
+    border: 2px solid #e0e0e0; /* Tambahkan border jika diinginkan */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e0e0e0; /* Warna teks menu navigasi abu-abu terang */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ff4c4c; /* Warna teks menu navigasi saat hover merah */
+}
+
+#about, #music-production, #recording-studio, #pricelist, #contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #1c1c1c; /* Latar belakang hitam */
+    color: #e0e0e0; /* Warna teks abu-abu terang */
+}
+
+.card {
+    position: relative; /* Untuk menempatkan overlay di atas gambar */
+    border: none;
+    border-radius: 10px;
+    background-color: #333; /* Latar belakang kartu abu-abu gelap */
+    color: #fff;
+    overflow: hidden; /* Agar overlay tidak melampaui batas kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #ff4c4c; /* Warna teks kartu merah */
+}
+
+.card-text {
+    color: #e0e0e0; /* Warna teks abu-abu terang */
+}
+
+.card.modern-music {
+    background: url('../img/modern-music.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.card.traditional-music {
+    background: url('../img/traditional-music.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.card.ethnic-music {
+    background: url('../img/ethnic-music.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Overlay dengan warna gelap */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi hitam */
+    z-index: 1; /* Memastikan overlay berada di atas gambar tetapi di bawah teks */
+}
+
+.card .card-body {
+    position: relative;
+    z-index: 2; /* Teks berada di atas overlay */
+}
+
+.table {
+    margin-top: 30px;
+    color: #e0e0e0; /* Warna teks tabel abu-abu terang */
+    background-color: #333; /* Latar belakang tabel abu-abu gelap */
+}
+
+.table th, .table td {
+    border-color: #444; /* Warna border tabel abu-abu lebih gelap */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2a2a2a; /* Warna baris tabel abu-abu tua */
+}
+
+.btn-danger {
+    background-color: #ff4c4c;
+    border-color: #ff4c4c;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #1c1c1c; /* Latar belakang footer hitam */
+    color: #e0e0e0; /* Warna teks footer abu-abu terang */
+}
+
+footer p {
+    margin: 0;
+}
+
+#contact img {
+    width: 100px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#contact img:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.jumbotron {
+    position: relative;
+    height: 400px; /* Sesuaikan tinggi bagian ini */
+    overflow: hidden;
+    margin-bottom: 0; /* Hilangkan margin bawah jika ada */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-animated {
+    background: linear-gradient(45deg, #ff0066, #ffcc00, #0099ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.music-anim {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.music-anim svg {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+    /* Tambahkan aturan CSS lain sesuai kebutuhan */
+}
+
+.play-btn {
+    width: 30px;
+    height: 30px;
+    background: #141313;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.play-btn::before {
+    content: "";
+    width: 0; 
+    height: 0;
+    border-left: 15px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-btn:hover {
+    background: #141313;
+    transform: scale(1.1);
+}
+
+.play-btn.paused::before {
+    border-left: 0;
+}
+
+.play-btn.paused::after {
+    content: "";
+    width: 10px;
+    height: 20px;
+    background: white;
+    display: inline-block;
+    margin: 0 2px;
+}
+.music-control {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
